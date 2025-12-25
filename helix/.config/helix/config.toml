@@ -1,0 +1,72 @@
+theme = "base16_transparent"
+
+[editor]
+scrolloff = 5
+bufferline = "always"
+line-number = "relative"
+cursorline = true
+rulers = [120]
+mouse = true
+true-color = true
+end-of-line-diagnostics = "hint"
+text-width = 100
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "version-control"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "workspace-diagnostics", "position", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-progress-messages = true
+display-inlay-hints = true
+auto-signature-help = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.file-picker]
+hidden = false
+ignore = true
+
+[keys.normal]
+C-right = [":bn"]
+C-left = [":bp"]
+C-f = "file_picker"
+y = "yank_main_selection_to_clipboard"
+"space" = { "x" = ":buffer-close!", "s" = ":w!", "q" = ":q!", "o"= "symbol_picker" }
+"A-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
