@@ -1,35 +1,36 @@
-background-opacity=0.85
-background-blur-radius = 10
+# Performance optimizations
+window-vsync = false
+image-storage-limit = 0
+scrollback-limit = 5000
 
-quit-after-last-window-closed=true
+# Appearance
+background-opacity = 1
+background-blur-radius = 20
+theme = Github Dark Default
+font-size = 13.25
+font-thicken = false
+cursor-style = bar
+cursor-style-blink = true
 
-theme = Github Dark
+# Window behavior
+quit-after-last-window-closed = true
+resize-overlay = never
+unfocused-split-opacity = 1.0
+maximize = true
+# window-decoration = false
+window-padding-x = 10
+window-padding-y = 5
 
-keybind = shift+enter=text:\n
-command = /usr/local/bin/tmux new-session -A -s local
-
+# macOS specific
 macos-option-as-alt = left
 macos-non-native-fullscreen = true
 macos-titlebar-style = hidden
 
-resize-overlay = never
-unfocused-split-opacity = 1.0
-window-vsync = false
-
-font-size = 11
-
-window-width = 120
-window-height = 32
-window-padding-x = 10
-window-padding-y = 5
-
-#scrollback-limit = 10000
-image-storage-limit = 0
-scrollback-limit = 5000
-
+# Terminal behavior
 mouse-scroll-multiplier = 3
-cursor-style = bar
-cursor-style-blink = true
+wait-after-command = false
 
-#font-feature = -liga
-font-thicken = false
+
+keybind = shift+enter=text:\n
+keybind = super+t=ignore
+command = /usr/local/bin/tmux new-session -A -s local
