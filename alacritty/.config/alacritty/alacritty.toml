@@ -1,0 +1,44 @@
+[env]
+TERM = "xterm-256color"
+
+[general]
+live_config_reload = true
+import = [
+    "~/.config/alacritty/themes/custom.toml"
+]
+
+[window]
+blur = false
+decorations = "Buttonless"
+padding = { x = 15, y = 10 }
+option_as_alt = "Both"
+startup_mode = "Maximized"
+dynamic_padding = false
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[scrolling]
+history = 0
+multiplier = 3
+
+[terminal.shell]
+program = "/usr/local/bin/tmux"
+args = ["new-session", "-A", "-s", "main"]
+
+[font]
+normal = { family = "GeistMono Nerd Font" }
+bold = { style = "Regular" }
+size = 16.25
+builtin_box_drawing = true
+
+[mouse]
+hide_when_typing = false
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "None"
