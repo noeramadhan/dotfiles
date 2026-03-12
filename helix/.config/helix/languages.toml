@@ -1,7 +1,8 @@
-[language-server.phpactor]
-command = "phpactor"
-args = [ "language-server" ]
+[[language]]
+name = "go"
+formatter = { command = "gofmt" }
 
 [[language]]
-name = "php"
-language-servers = [ "phpactor" ]
+name = "rust"
+formatter = { command = "rustfmt" }
+auto-format = true
