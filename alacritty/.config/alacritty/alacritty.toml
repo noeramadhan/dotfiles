@@ -1,5 +1,5 @@
 [env]
-TERM = "xterm-256color"
+TERM = "tmux-256color"
 
 [general]
 live_config_reload = true
@@ -10,10 +10,10 @@ import = [
 [window]
 blur = false
 decorations = "Buttonless"
-padding = { x = 15, y = 10 }
+padding = { x = 10, y = 10 }
 option_as_alt = "Both"
 startup_mode = "Maximized"
-dynamic_padding = false
+resize_increments = true
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
@@ -22,15 +22,27 @@ style = { shape = "Beam", blinking = "On" }
 history = 0
 multiplier = 3
 
+[terminal]
+osc52 = "CopyPaste"
+
 [terminal.shell]
-program = "/usr/local/bin/tmux"
+program = "/opt/homebrew/bin/tmux"
 args = ["new-session", "-A", "-s", "main"]
 
 [font]
 normal = { family = "GeistMono Nerd Font" }
-bold = { style = "Regular" }
-size = 16.25
+italic = { family = "GeistMono Nerd Font" }
+bold = { family = "GeistMono Nerd Font" }
+size = 11.25
 builtin_box_drawing = true
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
 
 [mouse]
 hide_when_typing = false
@@ -42,3 +54,30 @@ draw_bold_text_with_bright_colors = false
 key = "N"
 mods = "Command"
 action = "None"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "Q"
+mods = "Command"
+action = "None"
+
+[selection]
+save_to_clipboard = true
+
+[[hints.enabled]]
+command = "open"   # macOS
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "O", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
