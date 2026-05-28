@@ -1,0 +1,26 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[user]
+	name = 
+	email = 
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[push]
+	autoSetupRemote = true
+
+[core]
+	autocrlf = input
+	fsmonitor = true
+	untrackedCache = true
