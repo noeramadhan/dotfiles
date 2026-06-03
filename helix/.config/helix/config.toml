@@ -19,9 +19,9 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["file-name", "file-modification-indicator"]
-center = ["spinner", "spacer", "version-control"]
-right = ["diagnostics", "workspace-diagnostics", "position"]
+left = ["spinner", "diagnostics", "workspace-diagnostics"]
+center = ["file-name", "file-modification-indicator"]
+right = ["version-control", "total-line-numbers"]
 mode.normal = "N"
 mode.insert = "I"
 mode.select = "S"
